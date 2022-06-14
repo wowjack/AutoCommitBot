@@ -8,8 +8,8 @@ else
     echo $RANDOM > test.txt
 fi
 
-R=echo $RANDOM | md5sum
+R=echo $RANDOM | md5sum | head -c 20 | echo
 
 git add -A
-git commit -m "Stupid bot commit" 
+git commit -m $RANDOM
 git push

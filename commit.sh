@@ -8,6 +8,6 @@ else
     echo hello > test.txt
 fi
 
-git add -A
-git commit -m "Stupid bot commit"
-git push
+git add -A > add.txt
+git commit -m "Stupid bot commit" > commit.txt
+git push > push.txt

@@ -5,7 +5,7 @@ FILE=./test.txt
 if test -f "$FILE"; then
     rm $FILE
 else
-    echo hello > test.txt
+    echo $RANDOM > test.txt
 fi
 
 git add -A

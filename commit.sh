@@ -8,8 +8,6 @@ else
     echo hello > test.txt
 fi
 
-whoami > who.txt
-
 git add -A
 git commit -m "Stupid bot commit"
 git push

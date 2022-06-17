@@ -9,6 +9,6 @@ do
     git add -A
     MESSAGE=$(echo "$(date +%D) Commit #$var")
     git commit -m "$MESSAGE"
-    #git push
-    #sleep 10
+    git push
+    sleep 10
 done

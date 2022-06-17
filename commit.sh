@@ -1,15 +1,14 @@
 #!/bin/bash
 cd /home/ubuntu/repos/AutoCommitBot
 
-FILE=./test.txt
-if test -f "$FILE"; then
-    rm $FILE
-else
-    echo $RANDOM > test.txt
-fi
-
-R=echo $RANDOM | md5sum | head -c 20 | echo
-
-git add -A
-git commit -m $RANDOM
-git push
+LOOPS=$(echo $(($RANDOM%5)))
+echo "Num commits: $(($LOOPS+1))" > log.txt
+for var in $(seq $(($LOOPS+1)))
+do
+    echo -e "$(date)\t$(echo $RANDOM | md5sum)" >> log.txt
+    echo "Commiting"
+    git add -A
+    git commit -m $RANDOM
+    git push
+    sleep 10
+done

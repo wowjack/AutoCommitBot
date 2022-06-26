@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /home/ubuntu/repos/AutoCommitBot
 
-LOOPS=$(echo $(($RANDOM%5)))
+LOOPS=$(echo $(($RANDOM%3)))
 echo "Num commits: $(($LOOPS+1))" > log.txt
 for var in $(seq $(($LOOPS+1)))
 do
